@@ -2,8 +2,7 @@
 
 [图灵社区关于本书的介绍](https://www.ituring.com.cn/book/171) [人民邮电出版社京东自营官方旗舰店 本书购买链接](https://item.jd.com/13078641.html)
 
-[![Cloud Studio Template](https://cs-res.codehub.cn/common/assets/icon-badge.svg)](https://cloudstudio.net/a/22563999686746112?channel=share&sharetype=Markdown)
-
+[![Cloud Studio Template](https://cs-res.codehub.cn/common/assets/icon-badge.svg)](https://cloudstudio.net/a/22564384894943232?channel=share&sharetype=Markdown)
 # z22_c6_d27_e22_labs_cs_linux_command_base
 10_Linux命令大全搜索工具_内容包含Linux命令手册_详解_学习_搜集. https://jaywcjlove.gitee.io/linux-command/
 
