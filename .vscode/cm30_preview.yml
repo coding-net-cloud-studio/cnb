@@ -1,0 +1,13 @@
+autoOpen: true
+apps:
+  - port: 5000
+    run: ./07_run_me_本教学仓库版本.sh && pip3 install -i https://mirrors.tencent.com/pypi/simple/ -r ./gg50_resources/b32_html/templates/requirements.txt && $(nohup python3 ./gg50_resources/b32_html/templates/p30_python_flask_app.py > /dev/null 2>&1 &) && clear && pwd && ./07_run_me_本教学仓库版本.sh gs
+    root: .
+    name: linux_command_公告板
+    description: v00.00.00.20_cloud_studio_linux_command_公告板
+    autoOpen: true
+
+
+# ps -ef | grep python3 | grep  p30_python_flask |awk '{print $2}'
+
+# kill $(ps -ef | grep python3 | grep  p30_python_flask |awk '{print $2}')
