@@ -1,13 +1,21 @@
 autoOpen: true
 apps:
   - port: 5000
-    run: ./07_run_me_本教学仓库版本.sh && pip3 install -i https://mirrors.tencent.com/pypi/simple/ -r ./gg50_resources/b32_html/templates/requirements.txt && $(nohup python3 ./gg50_resources/b32_html/templates/p30_python_flask_app.py > /dev/null 2>&1 &) && clear && pwd && ./07_run_me_本教学仓库版本.sh gs
+    #把python3修改为python 以后可以正常工作,/usr/bin/python3(这里安装的是python 3.8版本),/root/.pyenv/shims/python (这里安装的是python 3.10版本)
+    #用sudo apt install模式安装了很多的软件,把python3的连接给修改到/usr/bin/python3去了.原始python3的位置在/root/.pyenv/shims/python3
+    # 把初始化脚本变为可执行
+    # 执行~/RemoteWorking/10.wmscript_init_this.sh 这个初始化脚本
+    # 在上述初始化脚本中判断是否重复初始化
+    # run: echo "preview执行了1010"
+    # run: chmod +x ~/RemoteWorking/*.sh && ~/RemoteWorking/10.wmscript_init_this.sh && pip3 install -i https://mirrors.tencent.com/pypi/simple/ -r requirements.txt && python3 app.py
+    # run: echo "preview执行了1010" && make -f 02.makefile.wmmake runonce
+    # run: make -f 02.makefile.wmmake runonce && pip3 install -i https://mirrors.tencent.com/pypi/simple/ -r ./1820.2020.python_start_preview_browser/web/requirements.txt && python3 ./1820.2020.python_start_preview_browser/web/app.py
+    # REVIEW 解决2023_11_27_0020_linux_c公告板_无法启动
+    # https://blog.csdn.net/qq_44402184/article/details/134468631
+    # run: make -f Makefile wmtask_runonce_set_env && pip3 install --upgrade pip && pip3 install -i https://mirrors.tencent.com/pypi/simple/ ansible==2.9.6 && pip3 install -i https://mirrors.tencent.com/pypi/simple/ -r ./.wmstudy/wm28.preview/web/requirements.txt && pip3 install --upgrade Werkzeug && pip3 install --upgrade Flask && python3 ./.wmstudy/wm28.preview/web/app.py
+    # run: make -f Makefile wmtask_runonce_set_env && pip3 install --upgrade pip && pip3 install -i https://mirrors.tencent.com/pypi/simple/ ansible==2.9.6 && pip3 install -i https://mirrors.tencent.com/pypi/simple/ -r ./.wmstudy/wm28.preview/web/requirements.txt && python3 ./.wmstudy/wm28.preview/web/app.py
+    run: export PATH=.:${PATH} && make -f Makefile 12_init_for_cloudstudio
     root: .
-    name: linux_command_公告板
-    description: v00.00.00.20_cloud_studio_linux_command_公告板
+    name: linux_c_公告板
+    description: cloud_studio_linux_c学习_Linux环境编程_linux_c_学习项目_启动_公告板
     autoOpen: true
-
-
-# ps -ef | grep python3 | grep  p30_python_flask |awk '{print $2}'
-
-# kill $(ps -ef | grep python3 | grep  p30_python_flask |awk '{print $2}')
