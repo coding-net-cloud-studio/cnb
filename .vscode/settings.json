@@ -1,282 +1,252 @@
 {
-	"mediaPreview.video.autoPlay":true,
-	"search.useIgnoreFiles":true,
-	"editor.fontSize": 18,
-	"editor.mouseWheelZoom": true,
-	"terminal.integrated.experimentalImageSupport": true,
-	"terminal.integrated.fontSize": 16,
-	// "terminal.integrated.profiles.osx": {
-	// 	// This will override the builtin bash profile
-	// 	"bash": {
-	// 	  "path": "bash",
-	// 	  "args": ["-l"],
-	// 	  "icon": "terminal-bash"
-	// 	}
-	//   }
-	// },
-	"Codegeex.Chat.LanguagePreference": "中文",
-	"json.schemaDownload.enable":true,
-	"go.lintOnSave": "workspace",
-	"go.lintTool": "golangci-lint",
-	"go.inferGopath": false,
-	"cloudstudio.autosleep": "no",
-	"go.toolsManagement.autoUpdate": true,
-	"go.toolsEnvVars": {
-		"GO111MODULE": "on"
-	  },
-	"redhat.telemetry.enabled": false,
-	"[go]": {
-		"editor.formatOnSave": true,
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": "explicit"
-		},
-		// Optional: Disable snippets, as they conflict with completion ranking.
-		"editor.snippetSuggestions": "none",
-	},
-	"[go.mod]": {
-		"editor.formatOnSave": true,
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": "explicit"
-		},
-	},
-	"gopls": {
-		// Add parameter placeholders when completing a function.
-		"usePlaceholders": true,
-		// If true, enable additional analyses with staticcheck.
-		// Warning: This will significantly increase memory usage.
-		"staticcheck": false,
-		// "experimentalWorkspaceModule": true,
-	},
-	"go.testFlags": [
-		"-v"
-	],
-	"code-runner.fileDirectoryAsCwd": true,
-	"code-runner.runInTerminal": true,
-	"code-runner.executorMapByGlob": {
-		"Makefile": "cd $dir && make -f $fileName",
-		"makefile": "cd $dir && make -f $fileName",
-		"go.mod": "cd $dir && go mod download -x",
-	},
-	"code-runner.executorMapByFileExtension": {
-		".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
-		".vbs": "cscript //Nologo",
-		".scala": "scala",
-		".jl": "julia",
-		".cr": "crystal",
-		".ml": "ocaml",
-		".exs": "elixir",
-		".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-		".rkt": "racket",
-		".scm": "csi -script",
-		".ahk": "autohotkey",
-		".au3": "autoit3",
-		".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
-		".kts": "kotlinc -script",
-		".dart": "dart",
-		".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-		".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-		".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-		".hs": "runhaskell",
-		".nim": "nim compile --verbosity:0 --hints:off --run",
-		".csproj": "dotnet run --project",
-		".fsproj": "dotnet run --project",
-		".lisp": "sbcl --script",
-		".kit": "kitc --run",
-		".v": "v run",
-		".vsh": "v run",
-		".sass": "sass --style expanded",
-		".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-		".ring": "ring",
-		".sml": "cd $dir && sml $fileName",
-		".gop": "cd $dir && gop run $fileName",
-		".go": "cd $dir && GO111MODULE=auto  go run $fileName",
-		".wmmake": "cd $dir && make -f $fileName",
-	},
-	"bookmarks.saveBookmarksInProject": true,
-	"bookmarks.sideBar.expanded": true,
-	"bookmarks.useWorkaroundForFormatters": true,
-	"codetour.recordMode": "pattern",
-	"codetour.showMarkers": true,
-	"codetour.promptForWorkspaceTours": true,
-
-	"[go][go.mod]": {
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": "explicit"
-		}
-	},
-
-	"workbench.editorAssociations": {
-		"*.md": "default",
-		"*.hdnb": "handydandy-notebook"
-	  },
-
-
-	// https://blog.csdn.net/qq_57749525/article/details/122509663
-
-	// Command Runner扩展的设置
-	// NOTE 被下面的 multiCommand扩展_所调用
-	// https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner
-	// https://github.com/edonet/vscode-command-runner
-	"command-runner.terminal.name": "runCommand",
-    "command-runner.terminal.autoClear": true,
-    "command-runner.terminal.autoFocus": true,
-
-	// multiCommand扩展的设置
-	// NOTE 被下面的_automation扩展的设置_所调用
-	// https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command
-	// https://github.com/ryuta46/vscode-multi-command
-	"multiCommand.commands": [
-		{
-			"command": "multiCommand.cloudstudio_open_handy_notebook",
-			"sequence": [
-				// "cursorDown",
-				// "cursorDown",
-				// "cursorDown",
-				// "cursorDown",
-				// "cursorDown",
-				// "cursorDown",
-				// "cursorBottom",
-				// {
-				// 	"command": "type",
-				// 	"args": { "text": "Hello_这是我写的_在文件中_${file}" }
-				// },
-				// {
-				// 	"command": "command-runner.run",
-				// 	"args": {
-				// 		"command": "echo ${workspaceFolder}"
-				// 	}
-				// },
-				// {
-				// 	"command": "command-runner.run",
-				// 	"args": {
-				// 		"command": "echo ${file}"
-				// 	}
-				// },
-				// NOTE 这里使用Handy notebook的模式
-				{
-					"command": "command-runner.run",
-					"args": {
-						"command": "wmcloudstudio ${file}"
-					}
-				}
-				// {
-				// 	"command": "command-runner.run",
-				// 	"args": {
-				// 		"command": "echo"
-				// 	}
-				// }
-
-			]
-		},
-		{
-			"command": "multiCommand.swapChar",
-			"interval": 30,
-			"sequence": [
-				"cursorLeftSelect",
-				"editor.action.clipboardCutAction",
-				"cursorRight",
-				"editor.action.clipboardPasteAction"
-			]
-		}
-	],
-
-	// handyDandyNotebook扩展_是最核心的扩展
-	// https://marketplace.visualstudio.com/items?itemName=jakearl.handydandy-notebook
-	// https://github.com/JacksonKearl/vscode-handydandy-notebook
-
-	// NOTE 获得vscode的扩展的命令等依靠是如下的扩展
-	// NOTE VS Code Commands Inspector
-	// https://marketplace.visualstudio.com/items?itemName=babakks.vscode-command-inspector
-	// https://github.com/babakks/vscode-command-inspector
-	// Command Alias
-	// https://marketplace.visualstudio.com/items?itemName=ArturoDent.command-alias
-	// https://github.com/ArturoDent/command-alias
-
-	// NOTE vscode的文档
-	// Built-in Commands
-	// https://code.visualstudio.com/api/references/commands
-	// https://github.com/microsoft/vscode-extension-samples
-
-	// NOTE 准备深度研究的其他vscode扩展包括
-	// https://marketplace.visualstudio.com/items?itemName=jeff-hykin.macro-commander
-	// https://github.com/jeff-hykin/macro-commander
-
-	// REVIEW 执行的过程
-	// NOTE 当进入cloudstudio社区版本中
-	// 20_按照上述环境的课程_catlog.yml中_把某个hdnb后缀的文件设置为code
-	// 30_上述_hdnb文件就是一个markdown文件_也是一个文本文件
-	// 40_而cloudstudio社区版本中的课程组件_只会把该文件按照文本文件打开
-	// 50_当按照文本文件打开上述文件以后_vscode的扩展_automation的如下配置将被激活
-	// 60_该automation试图_执行_另外一个vscode扩展_multiCommand
-	// 70_而上面所述的multiCommand扩展_将试图执行多个命令
-	// 80_在上面所述的multiCommand扩展_最重要的将是执行_另外一个vscode扩展_command-runner
-	// 90_而command-runner扩展_将试图执行_一个命令_就是如下的核心命令_wmcloudstudio ${file}
-	// 92_wmcloudstudio是在cloudstudio上封装了一点的bash的脚本
-	// 94_wmcloudstudio_力图解决的问题是_手工打开的handy文件与通过社区版本的_课程_catlog.yml打开的文件_不同处理
-	// 100_而wmcloudstudio ${file}命令_将试图打开_当前文件的_也就是那个带有hdnb后缀文件的_handy_notebook_视图
-	// 110_到这里_一个很长的执行链条_成功完成
-	// 120_而在该文件的handy_notebook视图中_可以在其中的cell中_也就是单元格中_查看markdown格式的图片_查看b站的iframe嵌入的视频_执行多种语言的代码
-
-	// automation扩展的设置
-
-	"automaton.list": {
-		"markdownShowPreview": {
-			"description" : "如何把handy_notebook的hdnb文件用handy_notebook扩展给展现出来",
-			"onLoad": true,
-			// NOTE 这里就是vscode扩展_automation被激活的时机_与匹配条件
-			"onFileExtension":".hdnb",
-			"action" :[
-				{
-					"command": "$delay",
-					"args": {
-						"delay": 1000
-					}
-				},
-				// NOTE 下面的没有发挥作用_是错误的
-				// "handydandy-notebook.showPreviewToSide"
-				// "handydandy-notebook"
-				// "workbench.extensions.action.showInstalledExtensions"
-				// "cloudstuido.getBrowserUrl"
-				// "workbench.action.toggleMenuBar"
-				// "handydandy-notebook.openInNotebook"
-
-				// 下面的可以发挥作用
-				// "markdown.showPreviewToSide"
-				// "workbench.action.terminal.toggleTerminal"
-				// "vscode-command-inspector.dumpExtensionCommandsAsJSON"
-
-				// REVIEW 最核心部分的调用入口在这里
-				// NOTE 被cloudstudio社区版_课程_catalog.yml给激活
-				// NOTE 激活的关键在于code: "../b32_走进中国历史的长廊/40_这里可以运行草蟒版python.hdnb"就是该文件的后缀名是.hdnb
-				// 激活的模式就是_类似如下的配置
-
-				// - title: "第07节_apt_get_直接打开markdown_贝加尔阿楠"
-				// 	article: "../c50_resources/b26_markdown/command/apt-get.md"
-				// 	video: "player.bilibili.com/player.html?aid=976696962&bvid=BV1L44y1v7Hy&cid=443344712&p=1"
-				// 	code: "../b32_走进中国历史的长廊/40_这里可以运行草蟒版python.hdnb"
-
-				"multiCommand.cloudstudio_open_handy_notebook",
-
-
-
-
-				// NOTE 第一次是发挥了作用_总之有进步
-				// "workbench.action.reopenWithEditor"
-
-				// https://cloud.tencent.com/developer/ask/sof/106978626?from=16139
-				// "vscode.open"
-
-
-
-
-				// 可以发挥作用_但是会反复多次_重载窗口_慎用
-				// "workbench.action.reloadWindow"
-
-
-
-			]
-		}
-	},
+  "mediaPreview.video.autoPlay": true,
+  "search.useIgnoreFiles": true,
+  "editor.fontSize": 18,
+  "editor.mouseWheelZoom": true,
+  "terminal.integrated.experimentalImageSupport": true,
+  "terminal.integrated.fontSize": 16,
+  // "terminal.integrated.profiles.osx": {
+  // 	// This will override the builtin bash profile
+  // 	"bash": {
+  // 	  "path": "bash",
+  // 	  "args": ["-l"],
+  // 	  "icon": "terminal-bash"
+  // 	}
+  //   }
+  // },
+  "Codegeex.Chat.LanguagePreference": "中文",
+  "json.schemaDownload.enable": true,
+  "go.lintOnSave": "workspace",
+  "go.lintTool": "golangci-lint",
+  "go.inferGopath": false,
+  "cloudstudio.autosleep": "no",
+  "go.toolsManagement.autoUpdate": true,
+  "go.toolsEnvVars": {
+    "GO111MODULE": "on"
+  },
+  "redhat.telemetry.enabled": false,
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    // Optional: Disable snippets, as they conflict with completion ranking.
+    "editor.snippetSuggestions": "none",
+  },
+  "[go.mod]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+  },
+  "gopls": {
+    // Add parameter placeholders when completing a function.
+    "usePlaceholders": true,
+    // If true, enable additional analyses with staticcheck.
+    // Warning: This will significantly increase memory usage.
+    "staticcheck": false,
+    // "experimentalWorkspaceModule": true,
+  },
+  "go.testFlags": [
+    "-v"
+  ],
+  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMapByGlob": {
+    "Makefile": "cd $dir && make -f $fileName",
+    "makefile": "cd $dir && make -f $fileName",
+    "go.mod": "cd $dir && go mod download -x",
+  },
+  "code-runner.executorMapByFileExtension": {
+    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
+    ".vbs": "cscript //Nologo",
+    ".scala": "scala",
+    ".jl": "julia",
+    ".cr": "crystal",
+    ".ml": "ocaml",
+    ".exs": "elixir",
+    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    ".rkt": "racket",
+    ".scm": "csi -script",
+    ".ahk": "autohotkey",
+    ".au3": "autoit3",
+    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+    ".kts": "kotlinc -script",
+    ".dart": "dart",
+    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    ".hs": "runhaskell",
+    ".nim": "nim compile --verbosity:0 --hints:off --run",
+    ".csproj": "dotnet run --project",
+    ".fsproj": "dotnet run --project",
+    ".lisp": "sbcl --script",
+    ".kit": "kitc --run",
+    ".v": "v run",
+    ".vsh": "v run",
+    ".sass": "sass --style expanded",
+    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    ".ring": "ring",
+    ".sml": "cd $dir && sml $fileName",
+    ".gop": "cd $dir && gop run $fileName",
+    ".go": "cd $dir && GO111MODULE=auto  go run $fileName",
+    ".wmmake": "cd $dir && make -f $fileName",
+  },
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.sideBar.expanded": true,
+  "bookmarks.useWorkaroundForFormatters": true,
+  "codetour.recordMode": "pattern",
+  "codetour.showMarkers": true,
+  "codetour.promptForWorkspaceTours": true,
+  "[go][go.mod]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "workbench.editorAssociations": {
+    "*.md": "default",
+    "*.hdnb": "handydandy-notebook"
+  },
+  // https://blog.csdn.net/qq_57749525/article/details/122509663
+  // Command Runner扩展的设置
+  // NOTE 被下面的 multiCommand扩展_所调用
+  // https://marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner
+  // https://github.com/edonet/vscode-command-runner
+  "command-runner.terminal.name": "runCommand",
+  "command-runner.terminal.autoClear": true,
+  "command-runner.terminal.autoFocus": true,
+  // multiCommand扩展的设置
+  // NOTE 被下面的_automation扩展的设置_所调用
+  // https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command
+  // https://github.com/ryuta46/vscode-multi-command
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.cloudstudio_open_handy_notebook",
+      "sequence": [
+        // "cursorDown",
+        // "cursorDown",
+        // "cursorDown",
+        // "cursorDown",
+        // "cursorDown",
+        // "cursorDown",
+        // "cursorBottom",
+        // {
+        // 	"command": "type",
+        // 	"args": { "text": "Hello_这是我写的_在文件中_${file}" }
+        // },
+        // {
+        // 	"command": "command-runner.run",
+        // 	"args": {
+        // 		"command": "echo ${workspaceFolder}"
+        // 	}
+        // },
+        // {
+        // 	"command": "command-runner.run",
+        // 	"args": {
+        // 		"command": "echo ${file}"
+        // 	}
+        // },
+        // NOTE 这里使用Handy notebook的模式
+        {
+          "command": "command-runner.run",
+          "args": {
+            "command": "wmcloudstudio ${file}"
+          }
+        }
+        // {
+        // 	"command": "command-runner.run",
+        // 	"args": {
+        // 		"command": "echo"
+        // 	}
+        // }
+      ]
+    },
+    {
+      "command": "multiCommand.swapChar",
+      "interval": 30,
+      "sequence": [
+        "cursorLeftSelect",
+        "editor.action.clipboardCutAction",
+        "cursorRight",
+        "editor.action.clipboardPasteAction"
+      ]
+    }
+  ],
+  // handyDandyNotebook扩展_是最核心的扩展
+  // https://marketplace.visualstudio.com/items?itemName=jakearl.handydandy-notebook
+  // https://github.com/JacksonKearl/vscode-handydandy-notebook
+  // NOTE 获得vscode的扩展的命令等依靠是如下的扩展
+  // NOTE VS Code Commands Inspector
+  // https://marketplace.visualstudio.com/items?itemName=babakks.vscode-command-inspector
+  // https://github.com/babakks/vscode-command-inspector
+  // Command Alias
+  // https://marketplace.visualstudio.com/items?itemName=ArturoDent.command-alias
+  // https://github.com/ArturoDent/command-alias
+  // NOTE vscode的文档
+  // Built-in Commands
+  // https://code.visualstudio.com/api/references/commands
+  // https://github.com/microsoft/vscode-extension-samples
+  // NOTE 准备深度研究的其他vscode扩展包括
+  // https://marketplace.visualstudio.com/items?itemName=jeff-hykin.macro-commander
+  // https://github.com/jeff-hykin/macro-commander
+  // REVIEW 执行的过程
+  // NOTE 当进入cloudstudio社区版本中
+  // 20_按照上述环境的课程_catlog.yml中_把某个hdnb后缀的文件设置为code
+  // 30_上述_hdnb文件就是一个markdown文件_也是一个文本文件
+  // 40_而cloudstudio社区版本中的课程组件_只会把该文件按照文本文件打开
+  // 50_当按照文本文件打开上述文件以后_vscode的扩展_automation的如下配置将被激活
+  // 60_该automation试图_执行_另外一个vscode扩展_multiCommand
+  // 70_而上面所述的multiCommand扩展_将试图执行多个命令
+  // 80_在上面所述的multiCommand扩展_最重要的将是执行_另外一个vscode扩展_command-runner
+  // 90_而command-runner扩展_将试图执行_一个命令_就是如下的核心命令_wmcloudstudio ${file}
+  // 92_wmcloudstudio是在cloudstudio上封装了一点的bash的脚本
+  // 94_wmcloudstudio_力图解决的问题是_手工打开的handy文件与通过社区版本的_课程_catlog.yml打开的文件_不同处理
+  // 100_而wmcloudstudio ${file}命令_将试图打开_当前文件的_也就是那个带有hdnb后缀文件的_handy_notebook_视图
+  // 110_到这里_一个很长的执行链条_成功完成
+  // 120_而在该文件的handy_notebook视图中_可以在其中的cell中_也就是单元格中_查看markdown格式的图片_查看b站的iframe嵌入的视频_执行多种语言的代码
+  // automation扩展的设置
+  "automaton.list": {
+    "markdownShowPreview": {
+      "description": "如何把handy_notebook的hdnb文件用handy_notebook扩展给展现出来",
+      "onLoad": true,
+      // NOTE 这里就是vscode扩展_automation被激活的时机_与匹配条件
+      "onFileExtension": ".hdnb",
+      "action": [
+        {
+          "command": "$delay",
+          "args": {
+            "delay": 1000
+          }
+        },
+        // NOTE 下面的没有发挥作用_是错误的
+        // "handydandy-notebook.showPreviewToSide"
+        // "handydandy-notebook"
+        // "workbench.extensions.action.showInstalledExtensions"
+        // "cloudstuido.getBrowserUrl"
+        // "workbench.action.toggleMenuBar"
+        // "handydandy-notebook.openInNotebook"
+        // 下面的可以发挥作用
+        // "markdown.showPreviewToSide"
+        // "workbench.action.terminal.toggleTerminal"
+        // "vscode-command-inspector.dumpExtensionCommandsAsJSON"
+        // REVIEW 最核心部分的调用入口在这里
+        // NOTE 被cloudstudio社区版_课程_catalog.yml给激活
+        // NOTE 激活的关键在于code: "../b32_走进中国历史的长廊/40_这里可以运行草蟒版python.hdnb"就是该文件的后缀名是.hdnb
+        // 激活的模式就是_类似如下的配置
+        // - title: "第07节_apt_get_直接打开markdown_贝加尔阿楠"
+        // 	article: "../c50_resources/b26_markdown/command/apt-get.md"
+        // 	video: "player.bilibili.com/player.html?aid=976696962&bvid=BV1L44y1v7Hy&cid=443344712&p=1"
+        // 	code: "../b32_走进中国历史的长廊/40_这里可以运行草蟒版python.hdnb"
+        "multiCommand.cloudstudio_open_handy_notebook",
+        // NOTE 第一次是发挥了作用_总之有进步
+        // "workbench.action.reopenWithEditor"
+        // https://cloud.tencent.com/developer/ask/sof/106978626?from=16139
+        // "vscode.open"
+        // 可以发挥作用_但是会反复多次_重载窗口_慎用
+        // "workbench.action.reloadWindow"
+      ]
+    }
+  },
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
@@ -286,19 +256,120 @@
   "C_Cpp.formatting": "clangFormat",
   //   "editor.formatOnSave": true,
   "formatFiles.excludedFolders": [
-      "node_modules",
-      ".vscode",
-      ".git",
-      "dist",
-      ".chrome",
-      ".wmstudy",
-      ".out",
-      "dist",
-      ".tours",
-      ".tutorial",
-      ".air",
-      ".presentation-buddy"
+    "node_modules",
+    ".vscode",
+    ".git",
+    "dist",
+    ".chrome",
+    ".wmstudy",
+    ".out",
+    "dist",
+    ".tours",
+    ".tutorial",
+    ".air",
+    ".presentation-buddy"
   ],
   "formatFiles.extensionsToInclude": "c, h, ts, js, json",
-  "formatFiles.excludePattern": "md,hdnb"
+  "formatFiles.excludePattern": "md,hdnb",
+  "Codegeex.RepoIndex": true,
+  "commandOnAllFiles.commands": {
+    "cb38_把中文符号修改为英文符号": {
+      "command": "chinese-punctuation-to-english.toEnglish",
+      "includeFileExtensions": [
+        ".py",
+        ".h",
+        ".c",
+        ".cpp",
+        ".go",
+        ".rs",
+        ".js",
+        ".json",
+        ".lua"
+      ],
+      "excludeFolders": [
+        "node_modules",
+        "out",
+        ".vscode-test",
+        "media",
+        ".git"
+      ]
+    },
+    "cb40_删除尾部的空格": {
+      "command": "editor.action.trimTrailingWhitespace",
+      "includeFileExtensions": [
+        ".py",
+        ".h",
+        ".c",
+        ".cpp",
+        ".go",
+        ".rs",
+        ".js",
+        ".json",
+        ".lua"
+      ],
+      "excludeFolders": [
+        "node_modules",
+        "out",
+        ".vscode-test",
+        "media",
+        ".git"
+      ]
+    },
+    "cb42_shell_把中文符号修改为英文符号": {
+      "command": "chinese-punctuation-to-english.toEnglish",
+      "includeFileExtensions": [
+        ".sh",
+        "Makefile"
+      ],
+      "excludeFolders": [
+        "node_modules",
+        "out",
+        ".vscode-test",
+        "media",
+        ".git"
+      ]
+    },
+    "cb44_shell_删除尾部的空格": {
+      "command": "editor.action.trimTrailingWhitespace",
+      "includeFileExtensions": [
+        ".sh",
+        "Makefile"
+      ],
+      "excludeFolders": [
+        "node_modules",
+        "out",
+        ".vscode-test",
+        "media",
+        ".git"
+      ]
+    },
+    "cb46_text_把中文符号修改为英文符号": {
+      "command": "chinese-punctuation-to-english.toEnglish",
+      "includeFileExtensions": [
+        ".txt",
+        "md"
+      ],
+      "excludeFolders": [
+        "node_modules",
+        "out",
+        ".vscode-test",
+        "media",
+        ".git"
+      ]
+    },
+    "cb48_text_删除尾部的空格": {
+      "command": "editor.action.trimTrailingWhitespace",
+      "includeFileExtensions": [
+        ".txt",
+        "md"
+      ],
+      "excludeFolders": [
+        "node_modules",
+        "out",
+        ".vscode-test",
+        "media",
+        ".git"
+      ]
+    }
+  }
 }
