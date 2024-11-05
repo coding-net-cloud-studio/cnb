@@ -16,6 +16,6 @@ apps:
     # run: make -f Makefile wmtask_runonce_set_env && pip3 install --upgrade pip && pip3 install -i https://mirrors.tencent.com/pypi/simple/ ansible==2.9.6 && pip3 install -i https://mirrors.tencent.com/pypi/simple/ -r ./.wmstudy/wm28.preview/web/requirements.txt && python3 ./.wmstudy/wm28.preview/web/app.py
     run: export PATH=.:${PATH} && make -f Makefile 12_init_for_cloudstudio
     root: .
-    name: ai_公告板
-    description: cloud_studio_ai_noi_学习项目_启动_公告板
+    name: shell_公告板
+    description: cloud_studio_shell_学习项目_启动_公告板
     autoOpen: true

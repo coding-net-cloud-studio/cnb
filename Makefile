@@ -55,9 +55,9 @@ show: 5_show
 12_init_for_cloudstudio_main:
 	-@echo -e "$$(pwd)/Makefile wmtask_[12_init_for_cloudstudio]_目标_被运行\n"
 	-@ [[ -f $$(which cloudstudio) ]] && git remote remove  origin  || exit 0
-	-@ [[ -f $$(which cloudstudio) ]] && git remote add     origin https://cnb.cool/8888/c/linux_c.git || exit 0
-	@# -@ [[ -f $$(which cloudstudio) ]] && git remote add     cnb    https://cnb.cool/8888/c/linux_c.git || exit 0
-	@# -@ [[ -f $$(which cloudstudio) ]] && git remote add     github https://github.com/coding-net-cloud-studio/linux_c.git || exit 0
+	-@ [[ -f $$(which cloudstudio) ]] && git remote add     origin https://cnb.cool/8888/shell.git || exit 0
+	@# -@ [[ -f $$(which cloudstudio) ]] && git remote add     cnb    https://cnb.cool/8888/shell.git || exit 0
+	@# -@ [[ -f $$(which cloudstudio) ]] && git remote add     github https://github.com/coding-net-cloud-studio/shell.git || exit 0
 	-@ [[ -f $$(which cloudstudio) ]] && git checkout -b cloudstudio_刚刚下拉 || exit 0
 	-@ [[ -f $$(which cloudstudio) ]] && touch README.md
 	-@ [[ -f $$(which cloudstudio) ]] && git add -A || exit 0
